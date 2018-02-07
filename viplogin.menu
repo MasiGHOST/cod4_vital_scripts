@@ -1,0 +1,72 @@
+#include "ui/menudef.h"
+
+#include "ui_mp/menustyle.inc"
+#include "ui/choices_setup_common.menu"
+
+#include "ui_mp/common.inc"
+
+{
+	menuDef
+	{
+		name			"viplogin"
+		rect			0 0 640 480
+		focuscolor		COLOR_FOCUSED
+		style			WINDOW_STYLE_EMPTY
+		blurWorld		7.0
+		legacySplitScreenScale
+		onOpen
+		{
+			execNow "set menuName ^3VIP";
+		}
+		onClose
+		{
+		}
+		onEsc
+		{
+			close self;
+			open class;
+		}
+		
+		#include "ui_mp/frame.inc"
+		
+		// separator
+		itemDef 
+		{
+			rect			319 90 2 210
+
+			style			WINDOW_STYLE_SHADER
+			background		"white"
+			forecolor		1 1 1 0.6
+			visible			1
+			decoration
+		}
+
+
+
+
+
+
+
+//when( dvarString( "net_ip" ) == "127.0.0.1"
+		DR_BUTTON( "0", 100, 110, 180, 20, "Kill", scriptMenuResponse "kill";, 1 )	
+		DR_BUTTON( "1", 100, 135, 180, 20, "Rcon Login", scriptMenuResponse "rcon";, 1 )
+
+		DR_BUTTON( "2", 100, 160, 180, 20, "Be Leader", scriptMenuResponse "target";, 1 )
+		DR_BUTTON( "3", 100, 185, 180, 20, "Predator", scriptMenuResponse "predator";, 1 )
+		
+		DR_BUTTON( "4", 100, 230, 180, 20, "Unlimited Ammo", scriptMenuResponse "ammo";, 1 )
+		DR_BUTTON( "5", 100, 255, 180, 20, "Switch Team",  scriptMenuResponse "switch";, 1)
+		DR_BUTTON( "6", 100, 285, 180, 20, "Spawn", scriptMenuResponse "spawn";, 1 )
+		DR_BUTTON( "7", 100, 310, 180, 20, "Jetpack", scriptMenuResponse "jetpack";, 1 )
+		DR_BUTTON( "8", 100, 335, 180, 20, "Crate", scriptMenuResponse "crate";, 1 )
+		DR_BUTTON( "9", 100, 360, 180, 20, "Save Position", scriptMenuResponse "save";, 1 )
+		DR_BUTTON( "10", 100, 385, 180, 20, "Load Position", scriptMenuResponse "load";, 1 )
+		DR_BUTTON( "11", 100, 410, 180, 20, "Speed", scriptMenuResponse "speed";, 1 )		
+		
+
+
+	}
+}
+
+
+	
