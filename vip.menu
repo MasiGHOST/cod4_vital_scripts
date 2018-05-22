@@ -8,7 +8,7 @@
 {
 	menuDef
 	{
-		name			"viplogin"
+		name			"vip"
 		rect			0 0 640 480
 		focuscolor		COLOR_FOCUSED
 		style			WINDOW_STYLE_EMPTY
